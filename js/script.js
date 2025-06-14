@@ -14,3 +14,8 @@ function addTodo(e) {
     completed: false,
     isUpdating: false,
   }
+   todos.push(newTodo);
+  localStorage.setItem('todos', JSON.stringify(todos))
+  from.reset()
+  displayTodos()
+}
