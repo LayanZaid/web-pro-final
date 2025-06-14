@@ -8,3 +8,9 @@ function addTodo(e) {
     addInput.nextElementSibling.innerText = "*This field is required!"
     return;
   }
+  addInput.nextElementSibling.innerText = ""
+  const newTodo = {
+    todo: addInputValue,
+    completed: false,
+    isUpdating: false,
+  }
