@@ -3,3 +3,8 @@ const addInput = document.querySelector('#add-input')
 const todos = JSON.parse(localStorage.getItem("todos")) || []
 function addTodo(e) {
   e.preventDefault();
+  const addInputValue = addInput.value.trim();
+  if (addInputValue.length === 0) {
+    addInput.nextElementSibling.innerText = "*This field is required!"
+    return;
+  }
