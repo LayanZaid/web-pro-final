@@ -8,3 +8,9 @@ function getData() {
 getData()
 .then((data)=> displayData(data))
 .catch(error=> console.log(error))
+
+function displayData(data){
+  console.log(data);
+}
+
+displayData()
