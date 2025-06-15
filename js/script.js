@@ -26,3 +26,6 @@ function displayTodos() {
   todos.forEach((item, index) => {
     result += `
       <tr>
+      <td>${index + 1}</td>
+        
+        <td>${item.isUpdating ? <input type="text" data-index="${index}" value="${item.todo}"/> : item.todo}</td>
