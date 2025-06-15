@@ -35,3 +35,5 @@ function displayTodos() {
         <td>
           ${item.isUpdating ? ` <button class="btn btn-success"
             onclick="saveTodo(${index})"><i class="fa-solid fa-file-pen"></i></button>`
+             :
+        <button class="btn btn-primary" onclick="setUpdating(${index})"><i class="fa-solid fa-pen"></i></button>}
