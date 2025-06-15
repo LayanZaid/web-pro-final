@@ -37,3 +37,5 @@ function displayTodos() {
             onclick="saveTodo(${index})"><i class="fa-solid fa-file-pen"></i></button>`
              :
         <button class="btn btn-primary" onclick="setUpdating(${index})"><i class="fa-solid fa-pen"></i></button>}
+
+        <button onclick="deleteTodo(${index})" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
