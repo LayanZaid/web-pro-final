@@ -21,4 +21,8 @@ function addTodo(e) {
 }
 
 
-
+function displayTodos() {
+  let result = '';
+  todos.forEach((item, index) => {
+    result += `
+      <tr>
