@@ -31,3 +31,7 @@ function displayTodos() {
         <td>${item.isUpdating ? <input type="text" data-index="${index}" value="${item.todo}"/> : item.todo}</td>
 
         <td><input onclick="toggleCompleted(${index})" type="checkbox" ${item.completed ? 'checked' : ""}  /></td>
+
+        <td>
+          ${item.isUpdating ? ` <button class="btn btn-success"
+            onclick="saveTodo(${index})"><i class="fa-solid fa-file-pen"></i></button>`
