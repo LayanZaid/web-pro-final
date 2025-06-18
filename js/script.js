@@ -41,3 +41,18 @@ function displayFilteredTodos(filteredList) {
       </tr>
     `;
   });
+  document.getElementById('todos').innerHTML = result;
+}
+
+function deleteDoneTasks() {
+  const newList = todos.filter(todo => !todo.completed);
+  todos.length = 0;
+  todos.push(...newList);
+  localStorage.setItem("todos", JSON.stringify(todos));
+  displayTodos();
+}
+
+function deleteAllTasks() {
+  todos.length = 0;
+  localStorage.setItem("todos", JSON.stringify(todos));
+  displayTodos();
