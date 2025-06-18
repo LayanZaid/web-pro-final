@@ -14,3 +14,11 @@ function saveTodo(index) {
 }
 displayTodos()
 from.addEventListener('submit', addTodo)
+function filterTodos(status) {
+  let filtered = todos;
+
+  if (status === "done") {
+    filtered = todos.filter(todo => todo.completed);
+  } else if (status === "todo") {
+    filtered = todos.filter(todo => !todo.completed);
+  }
