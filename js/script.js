@@ -22,3 +22,15 @@ function filterTodos(status) {
   } else if (status === "todo") {
     filtered = todos.filter(todo => !todo.completed);
   }
+  displayFilteredTodos(filtered);
+}
+
+function displayFilteredTodos(filteredList) {
+  let result = '';
+  filteredList.forEach((item, index) => {
+    result += `
+      <tr>
+        <td>${index + 1}</td>
+        <td>${item.isUpdating ? <input type="text" data-index="${index}" value="${item.todo}"/> : item.todo}</td>
+        <td><input onclick="toggleCompleted(${index})" type="checkbox" ${item.completed ? 'checked' : ""} /></td>
+        <td>
